@@ -66,38 +66,48 @@ max-overall-download-limit=0
 disable-ipv6=false
 
 ### File
-file-allocation=trunc
-#file-allocation=falloc
+file-allocation=falloc
 #file-allocation=none
 no-file-allocation-limit=10M
 allow-overwrite=false
 auto-file-renaming=true
+continue=true
+remote-time=true
 
 ### Bittorent
-bt-enable-lpd=false
+bt-enable-lpd=true
 #bt-lpd-interface=eth2.2
-bt-max-peers=50
+bt-max-peers=0
 bt-max-open-files=100
-bt-request-peer-speed-limit=100K
+bt-request-peer-speed-limit=10M
 bt-stop-timeout=0
 enable-dht=true
-#enable-dht6=false
+enable-dht6=true
 enable-peer-exchange=true
-seed-ratio=1.5
-#seed-time=60
+seed-ratio=1.0
+seed-time=0
 max-upload-limit=0
 max-overall-upload-limit=0
+user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3602.2 Safari/537.36
+peer-agent=qBittorrent v4.1.3
+peer-id-prefix=-qB4130-
+bt-save-metadata=true
+bt-load-saved-metadata=true
+bt-remove-unselected-file=true
 
 ### FTP/HTTP
 ftp-pasv=true
 ftp-type=binary
 timeout=120
 connect-timeout=60
-split=8
+split=16
 max-concurrent-downloads=3
-max-connection-per-server=8
-min-split-size=1M
+max-connection-per-server=16
+min-split-size=4M
 check-certificate=false
+http-accept-gzip=true
+reuse-uri=false
+no-netrc=true
 
 ### Log
 log=$DIR_CFG/aria2.log
