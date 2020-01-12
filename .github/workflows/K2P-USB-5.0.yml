@@ -81,7 +81,6 @@ jobs:
         sudo ./clear_tree_simple
         sudo ./build_firmware_bkye $m
         sudo mv -f images/*.trx /opt/images/
-        done
     - name : Upload packages
       uses: actions/upload-artifact@master
       if: always()
