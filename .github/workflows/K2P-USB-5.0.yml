@@ -4,12 +4,8 @@ on:
   release:
     types: [published]
 push:
-  tags:
-   - 'v*'
   branches: 
-   - master
-  #schedule:
-  #  - cron: 0 17 * * 4
+    - master
   watch:
     types: [started]
 
